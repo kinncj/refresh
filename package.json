@@ -1,0 +1,31 @@
+{
+  "name": "refresh",
+  "version": "0.0.1",
+  "description": "A webdevelopment tool that refreshes the browser based on the filesystem changes",
+  "main": "refresh.js",
+  "bin": {
+    "refresh": "./refresh.js"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "keywords": [
+    "refresh",
+    "webdevelopment",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kinncj/refresh.git"
+  },
+  "author": "Kinn Coelho Julião - kinncj@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "~0.9.10",
+    "pkginfo": "~0.2.3",
+    "commander": "~1.0.5",
+    "fs-watch-tree": "~0.2.2",
+    "dirreader": "0.0.1",
+    "shelljs": "0.0.8"
+  }
+}
