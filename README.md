@@ -2,6 +2,8 @@ refresh
 =======
 Your webdevelopment tool
 
+[![Youtube video](http://img.youtube.com/vi/6A1HdK7iHVM/0.jpg)](http://www.youtube.com/watch?v=6A1HdK7iHVM)
+
 About
 ======
 A tool(proxy) that refreshes your browser based on filesystem notifications.
