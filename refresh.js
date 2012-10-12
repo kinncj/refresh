@@ -13,45 +13,7 @@ program
   .option('-t, --remoteport <remoteport> -no-', 'Remote server port', '80')
   .option('-d, --directory <directory> -no-', 'Directory to watch', '/tmp')
   .parse(process.argv);
-require('shelljs/global');
-var os = require('os');
-var sys = require('sys');
  
-var os_type = os.type();
-var installed = [];
-var not_installed = [];
- 
-var deps = {
-  php :  ''
-};
- 
-if(os_type == "Linux") {
-  //This is Linux so remove Mac deps.
-  delete deps['clang'];
-  delete deps['brew'];
-}
- 
-for(var dep in deps) {
-  if (!which(dep)) {
-    not_installed.push(dep);
-  }
-  else{
-    if(deps[dep]){
-      var version = exec(dep +' -v', {silent:true}).output;
-      console.log(version);
-      console.log(deps[dep]);
-      if(version.search(deps[dep]) == -1){
-        not_installed.push(dep); // Installed, but version mismatch.
-      }
-    }
-    else{
-      installed.push(dep);
-    }
-  }  
-}
-if (not_installed == 'php') {
-	return console.log("Missed system dependencies: "+not_installed );
-}
 function check(program)
 {
 	switch (true) {
@@ -73,5 +35,5 @@ if (!check(program)) {
 try{
 server.create(program.server, program.localport, program.remoteserver, program.remoteport, program.directory);
 }catch(err){
-
+ console.log(err);
 }

@@ -24,8 +24,6 @@
     "socket.io": "~0.9.10",
     "pkginfo": "~0.2.3",
     "commander": "~1.0.5",
-    "fs-watch-tree": "~0.2.2",
-    "dirreader": "0.0.1",
-    "shelljs": "0.0.8"
+    "inotify": "~1.0.0"
   }
 }
