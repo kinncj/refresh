@@ -29,7 +29,7 @@ Motivation and decision
 Usage
 ======
 
-	npm install refresh
+	npm install -g refresh (it may require root privileges)
 
 	refresh -s 127.0.0.1 -p 1337 -r http://localhost -t 80 -d /var/www
 	refresh -h
