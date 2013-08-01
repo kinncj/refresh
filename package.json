@@ -1,6 +1,6 @@
 {
   "name": "refresh",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A webdevelopment tool that refreshes the browser based on the filesystem changes",
   "main": "refresh.js",
   "bin": {
